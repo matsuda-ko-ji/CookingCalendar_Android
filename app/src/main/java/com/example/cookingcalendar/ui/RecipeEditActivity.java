@@ -1,15 +1,16 @@
-package com.example.cookingcalendar;
+package com.example.cookingcalendar.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import com.example.cookingcalendar.R;
+
+public class RecipeEditActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTheme(R.style.Theme_CookingCalendar);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_recipe_edit);
     }
 }
