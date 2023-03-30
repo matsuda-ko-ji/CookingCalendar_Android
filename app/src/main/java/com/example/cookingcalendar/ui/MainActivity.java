@@ -2,6 +2,9 @@ package com.example.cookingcalendar.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.os.Bundle;
 import android.view.View;
@@ -14,12 +17,15 @@ public class MainActivity extends AppCompatActivity {
     private FrameLayout favoriteLayout;
     private AppCompatImageView favoriteImage;
     private boolean isFavorite=false;
+    private ViewPager2 viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(R.style.Theme_CookingCalendar);
         setContentView(R.layout.activity_main);
+        // ViewPager
+        viewPager = findViewById(R.id.pager);
 
         //Toolbar設定
         favoriteLayout=findViewById(R.id.favorite_button);
@@ -37,5 +43,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        // viewPagerの設定
+        viewPager.setAdapter(new PagerAdapter(this));
     }
 }

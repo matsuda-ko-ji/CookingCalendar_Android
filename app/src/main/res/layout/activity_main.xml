@@ -8,39 +8,64 @@
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:background="@color/orange_2"
-        android:elevation="8dp">
-        
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="64dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
             android:layout_height="64dp"
-            android:gravity="center"
-            android:text="今日"/>
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/orange_2"
+            android:elevation="8dp">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/app_name"
-            android:gravity="center"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:gravity="center"
+                android:text="今日"/>
 
-        <FrameLayout
-            android:id="@+id/favorite_button"
-            android:layout_width="64dp"
-            android:layout_height="64dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/favorite_image"
-                android:layout_width="wrap_content"
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:src="@drawable/ic_baseline_star_off"/>
-        </FrameLayout>
+                android:layout_weight="1"
+                android:text="@string/app_name"
+                android:gravity="center"/>
 
-        
+            <FrameLayout
+                android:id="@+id/favorite_button"
+                android:layout_width="64dp"
+                android:layout_height="64dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/favorite_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_star_off"/>
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.core.widget.NestedScrollView>
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
 </FrameLayout>
