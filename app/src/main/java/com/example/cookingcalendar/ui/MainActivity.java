@@ -3,6 +3,7 @@ package com.example.cookingcalendar.ui;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatImageView;
 import androidx.fragment.app.FragmentActivity;
+import androidx.lifecycle.ViewModelProvider;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 import androidx.viewpager2.widget.ViewPager2;
 
@@ -11,6 +12,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.example.cookingcalendar.R;
+
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTheme(R.style.Theme_CookingCalendar);
         setContentView(R.layout.activity_main);
+
+        //ViewModelのインスタンスを取得
+        MainViewModel viewModel=new ViewModelProvider(this).get(MainViewModel.class);
         // ViewPager
         viewPager = findViewById(R.id.pager);
 
@@ -43,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        List list=viewModel.createListDayData();
 
         // viewPagerの設定
         viewPager.setAdapter(new PagerAdapter(this));
