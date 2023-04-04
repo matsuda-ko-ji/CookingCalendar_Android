@@ -14,13 +14,13 @@
         android:theme="@style/Theme.CookingCalendar"
         tools:targetApi="31">
         <activity
-            android:name=".ui.CookingPhotoActivity"
+            android:name=".ui.cooking_photo.CookingPhotoActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.RecipeEditActivity"
+            android:name=".ui.recipe_edit.RecipeEditActivity"
             android:exported="false" />
         <activity
-            android:name=".ui.MainActivity"
+            android:name=".ui.main.MainActivity"
             android:exported="true"
             android:theme="@style/AppTheme.Splash">
             <intent-filter>

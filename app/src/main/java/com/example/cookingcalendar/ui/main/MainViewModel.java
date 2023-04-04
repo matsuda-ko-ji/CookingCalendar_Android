@@ -1,8 +1,10 @@
-package com.example.cookingcalendar.ui;
+package com.example.cookingcalendar.ui.main;
 
 import android.util.Log;
 
 import androidx.lifecycle.ViewModel;
+
+import com.example.cookingcalendar.ui.DayData;
 
 import java.util.ArrayList;
 import java.util.Calendar;
