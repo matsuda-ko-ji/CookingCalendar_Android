@@ -35,4 +35,12 @@ public class DayData {
         isSelected = selected;
     }
 
+    @Override
+    public String toString() {
+        return "DayData{" +
+                "dayOfweek=" + dayOfweek +
+                ", day=" + day +
+                ", isSelected=" + isSelected +
+                '}';
+    }
 }

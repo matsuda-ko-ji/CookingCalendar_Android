@@ -8,7 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter;
 public class PagerAdapter extends FragmentStateAdapter {
 
 
-    public PagerAdapter(@NonNull FragmentActivity fragmentActivity) {
+    public PagerAdapter(@NonNull FragmentActivity fragmentActivity ) {
         super(fragmentActivity);
     }
 

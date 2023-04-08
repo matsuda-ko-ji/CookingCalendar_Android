@@ -62,12 +62,12 @@
                     xmlns:android="http://schemas.android.com/apk/res/android"
                     android:id="@+id/pager"
                     android:layout_width="match_parent"
-                    android:layout_height="64dp" />
+                    android:layout_height="wrap_content" />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
                     android:id="@+id/cook_image_layout"
                     android:layout_width="match_parent"
-                    android:layout_height="290dp"
+                    android:layout_height="250dp"
                     android:orientation="vertical">
                     <ImageView
                         android:layout_width="match_parent"
@@ -100,7 +100,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end|bottom"
         android:src="@drawable/ic_add"
-        android:contentDescription="@string/submit"
         android:layout_margin="16dp" />
 
 </FrameLayout>

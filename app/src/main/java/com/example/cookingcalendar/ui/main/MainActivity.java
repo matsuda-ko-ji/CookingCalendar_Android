@@ -75,9 +75,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        List list=viewModel.createListDayData();
+        List list = viewModel.createListDayData();
 
         // viewPagerの設定
         viewPager.setAdapter(new PagerAdapter(this));
+
     }
 }
