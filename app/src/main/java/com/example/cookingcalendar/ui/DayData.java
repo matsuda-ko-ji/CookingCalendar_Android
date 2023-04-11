@@ -1,9 +1,9 @@
 package com.example.cookingcalendar.ui;
 
 public class DayData {
-    private int dayOfweek=-1;
-    private int day=1;
-    private boolean isSelected=false;
+    private int dayOfweek = -1;
+    private int day = 1;
+    private boolean isSelected = false;
 
     public DayData(int dayOfweek, int day, boolean isSelected) {
         this.dayOfweek = dayOfweek;

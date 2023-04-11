@@ -5,28 +5,30 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class PagerAdapter extends FragmentStateAdapter {
 
+    private List<DayData> dataList;
 
-    public PagerAdapter(@NonNull FragmentActivity fragmentActivity ) {
+    public PagerAdapter(@NonNull FragmentActivity fragmentActivity,List<DayData> dataList) {
         super(fragmentActivity);
+        this.dataList = dataList;
     }
 
     @NonNull
     @Override
     public Fragment createFragment(int position) {
-        switch (position) {
-            case 0:
-            case 1:
-            case 2:
-                return SampleBlankFragment.newInstance();
-            default:
-                return SampleBlankFragment.newInstance();
-        }
+       return OneWeekFragment.newInstance(position);
     }
 
     @Override
     public int getItemCount() {
-        return 3;
+        int count = dataList.size()/7;
+        if((dataList.size()%7) != 0){
+            count++;
+        }
+        return count;
     }
 }

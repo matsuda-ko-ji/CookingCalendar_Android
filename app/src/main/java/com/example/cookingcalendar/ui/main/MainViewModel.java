@@ -11,11 +11,13 @@ import java.util.Calendar;
 import java.util.List;
 
 public class MainViewModel extends ViewModel {
+
+    private List<DayData> dayDataList;
     /**
      * カレンダーで使用する日付データを作成するメソッド
      * @return　日付データのリスト
      */
-    public List<DayData> createListDayData(){
+    public void loadListDayData(){
         //現在の日付でカレンダーインスタンスを生成
         Calendar calendar = Calendar.getInstance();
         int currentDay = calendar.get(Calendar.DATE);
@@ -50,7 +52,10 @@ public class MainViewModel extends ViewModel {
 
         }
         //先頭から31日分のデータを作成しリストに返す
-        return dayDataList;
+        this.dayDataList = dayDataList;
     }
 
+    public List<DayData> getDayDataList(){
+        return dayDataList;
+    }
 }

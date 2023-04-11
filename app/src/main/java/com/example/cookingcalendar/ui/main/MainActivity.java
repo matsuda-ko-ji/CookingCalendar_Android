@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 
 import com.example.cookingcalendar.R;
+import com.example.cookingcalendar.ui.DayData;
 import com.example.cookingcalendar.ui.PagerAdapter;
 import com.example.cookingcalendar.ui.cooking_photo.CookingPhotoActivity;
 import com.example.cookingcalendar.ui.recipe_edit.RecipeEditActivity;
@@ -28,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager2 viewPager;
     private LinearLayoutCompat cookImageLayout;
     private FloatingActionButton addMemoButton;
+    private MainViewModel viewModel;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         //ViewModelのインスタンスを取得
-        MainViewModel viewModel=new ViewModelProvider(this).get(MainViewModel.class);
+        viewModel=new ViewModelProvider(this).get(MainViewModel.class);
         // ViewPager
         viewPager = findViewById(R.id.pager);
 
@@ -75,10 +77,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        List list = viewModel.createListDayData();
+        viewModel.loadListDayData();
+        List<DayData> dataList = viewModel.getDayDataList();
 
         // viewPagerの設定
-        viewPager.setAdapter(new PagerAdapter(this));
+        viewPager.setAdapter(new PagerAdapter(this,dataList));
 
     }
 }
