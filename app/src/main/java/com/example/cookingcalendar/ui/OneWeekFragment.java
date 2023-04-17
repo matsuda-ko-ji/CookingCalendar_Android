@@ -10,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.FrameLayout;
 import android.widget.TextView;
 
 import com.example.cookingcalendar.R;
@@ -27,7 +28,21 @@ public class OneWeekFragment extends Fragment {
             R.id.day_of_week_6
     };
 
+    private static final int[] dayTextIds = {
+            R.id.day_text_0,R.id.day_text_1,R.id.day_text_2,
+            R.id.day_text_3,R.id.day_text_4,R.id.day_text_5,
+            R.id.day_text_6
+    };
+
+    private static final int[] frameIds = {
+            R.id.day_text_layout_0,R.id.day_text_layout_1,R.id.day_text_layout_2,
+            R.id.day_text_layout_3,R.id.day_text_layout_4,R.id.day_text_layout_5,
+            R.id.day_text_layout_6
+    };
+
     private List<TextView> dayOfWeekTextViewList = new ArrayList<>();
+    private List<TextView> dayTextViewList = new ArrayList<>();
+    private List<FrameLayout> frameFlameLayoutList = new ArrayList<>();
     private MainViewModel viewModel;
     private int position = -1;
 
@@ -50,7 +65,7 @@ public class OneWeekFragment extends Fragment {
         position = getArguments().getInt(KEY_POSITION);
 
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sample__blank, container, false);
+        return inflater.inflate(R.layout.fragment_one_week, container, false);
     }
 
     @Override
@@ -61,9 +76,46 @@ public class OneWeekFragment extends Fragment {
             dayOfWeekTextViewList.add(dayOfWeekTextView);
         }
 
-        // TODO: 日付表示用TextViewを取得する
+        for(int i = 0;i < dayTextIds.length; i++) {
+            TextView dayTextView = view.findViewById(dayTextIds[i]);
+            dayTextViewList.add(dayTextView);
+        }
 
-        // TODO: 日付選択用Viewを取得する
+        for(int i = 0;i < frameIds.length; i++) {
+            FrameLayout frameFrameLayout = view.findViewById(frameIds[i]);
+            frameFlameLayoutList.add(frameFrameLayout);
+        }
+        List<DayData> dayDataList = viewModel.getDayDataList();
+        int endPosition = (position + 1) * 7 - 1;
+        if(position == 4) {
+            endPosition = (position + 1) * 7 - 5;
+        }
+        List<DayData> subList = dayDataList.subList(position * 7,endPosition);
+        for(int i = 0; i < subList.size(); i++) {
+            DayData dayData = subList.get(i);
+            String week = getDayOfWeekName(dayData.getDayOfweek());
+            dayOfWeekTextViewList.get(i).setText(week);
+        }
+    }
 
+    private String getDayOfWeekName(int dayOfWeekNum){
+        switch(dayOfWeekNum){
+            case 0:
+                return "日";
+            case 1:
+                return "月";
+            case 2:
+                return "火";
+            case 3:
+                return "水";
+            case 4:
+                return "木";
+            case 5:
+                return "金";
+            case 6:
+                return "土";
+            default:
+                return "";
+        }
     }
 }
