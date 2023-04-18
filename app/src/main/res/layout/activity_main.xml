@@ -69,12 +69,18 @@
                     android:layout_width="match_parent"
                     android:layout_height="250dp"
                     android:orientation="vertical">
-                    <ImageView
+                    <androidx.cardview.widget.CardView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/cook"
-                        android:scaleType="centerCrop"/>
-
+                        android:layout_margin="20dp"
+                        app:cardCornerRadius="16dp">
+                        <ImageView
+                            android:id="@+id/cook_picture"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/image_sample"
+                            android:scaleType="centerCrop"/>
+                    </androidx.cardview.widget.CardView>
                 </androidx.appcompat.widget.LinearLayoutCompat>
 
                 <androidx.appcompat.widget.LinearLayoutCompat
