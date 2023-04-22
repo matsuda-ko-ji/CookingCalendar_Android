@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import com.example.cookingcalendar.R;
 import com.example.cookingcalendar.ui.DayData;
@@ -30,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private LinearLayoutCompat cookImageLayout;
     private FloatingActionButton addMemoButton;
     private MainViewModel viewModel;
+    private TextView emptyText;
+    private TextView cookExplanation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,6 +48,22 @@ public class MainActivity extends AppCompatActivity {
         //Toolbar設定
         favoriteLayout=findViewById(R.id.favorite_button);
         favoriteImage=findViewById(R.id.favorite_image);
+        emptyText=findViewById(R.id.empty_text);
+        cookExplanation=findViewById(R.id.cook_explanation);
+        emptyText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RecipeEditActivity.class);
+                startActivity(intent);
+            }
+        });
+        cookExplanation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, RecipeEditActivity.class);
+                startActivity(intent);
+            }
+        });
         favoriteLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
