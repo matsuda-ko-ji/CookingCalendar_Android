@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.recipe_edit.RecipeEditActivity">
+    tools:context=".ui.main.MainActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/orange_2"
+            android:elevation="8dp">
+
+            <FrameLayout
+                android:id="@+id/back_button"
+                android:layout_width="64dp"
+                android:layout_height="64dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/back_button_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_back"
+                    />
+            </FrameLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="レシピ編集画面"
+                android:gravity="center"/>
+            <FrameLayout
+                android:id="@+id/done_button"
+                android:layout_width="64dp"
+                android:layout_height="64dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/done_button_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_done_outline"/>
+            </FrameLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+</FrameLayout>

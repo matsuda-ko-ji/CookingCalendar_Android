@@ -101,7 +101,10 @@ public class OneWeekFragment extends Fragment {
             FrameLayout dayTextBg = frameFlameLayoutList.get(i);
             if(dayData.isSelected()){
                 //　選択されてたら背景を変える
-
+                dayTextBg.setBackgroundResource(R.drawable.shape_calender_bg_on);
+            }
+            else {
+                dayTextBg.setBackgroundResource(R.drawable.shape_calender_bg_off);
             }
         }
 
