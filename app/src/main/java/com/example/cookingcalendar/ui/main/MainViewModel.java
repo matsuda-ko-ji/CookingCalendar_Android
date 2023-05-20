@@ -9,6 +9,7 @@ import com.example.cookingcalendar.ui.DayData;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+import java.util.TimeZone;
 
 public class MainViewModel extends ViewModel {
 
@@ -16,10 +17,12 @@ public class MainViewModel extends ViewModel {
     /**
      * カレンダーで使用する日付データを作成するメソッド
      * @return　日付データのリスト
+     * @return 今日の日付のページ番号
      */
     public void loadListDayData(){
+        TimeZone timeZone=TimeZone.getTimeZone("Asia/Tokyo");
         //現在の日付でカレンダーインスタンスを生成
-        Calendar calendar = Calendar.getInstance();
+        Calendar calendar = Calendar.getInstance(timeZone);
         int currentDay = calendar.get(Calendar.DATE);
         int currentWeek = calendar.get(Calendar.DAY_OF_WEEK);
 
@@ -31,7 +34,7 @@ public class MainViewModel extends ViewModel {
         Log.d("TAG","currentDay="+ currentDay +"/day="+day);
         Log.d("TAG","currentWeek="+ currentWeek +"/Week="+week);
 
-        DayData dayData = new DayData(6,day,false);
+        DayData dayData = new DayData(week,day,false);
 
         ArrayList dayDataList = new ArrayList<DayData>();
 

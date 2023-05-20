@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +18,7 @@ import com.example.cookingcalendar.R;
 import com.example.cookingcalendar.ui.main.MainViewModel;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 public class OneWeekFragment extends Fragment {
@@ -86,15 +88,21 @@ public class OneWeekFragment extends Fragment {
             frameFlameLayoutList.add(frameFrameLayout);
         }
         List<DayData> dayDataList = viewModel.getDayDataList();
-        int endPosition = (position + 1) * 7 - 1;
+        int endPosition = (position + 1) * 7;
         if(position == 4) {
-            endPosition = (position + 1) * 7 - 5;
+            endPosition = (position + 1) * 7 - 4;
         }
         List<DayData> subList = dayDataList.subList(position * 7,endPosition);
         for(int i = 0; i < subList.size(); i++) {
             DayData dayData = subList.get(i);
             String week = getDayOfWeekName(dayData.getDayOfweek());
             dayOfWeekTextViewList.get(i).setText(week);
+            dayOfWeekTextViewList.get(i).setTextColor(
+                    getActivity().getResources().getColor(
+                            getWeekColorResId(dayData.getDayOfweek()),
+                            getActivity().getTheme()
+                    )
+            );
             // 日付データの設定
             dayTextViewList.get(i).setText(String.valueOf(dayData.getDay()));
             // 選択状態の確認
@@ -110,24 +118,33 @@ public class OneWeekFragment extends Fragment {
 
     }
 
-    private String getDayOfWeekName(int dayOfWeekNum){
-        switch(dayOfWeekNum){
-            case 0:
-                return "日";
-            case 1:
-                return "月";
-            case 2:
-                return "火";
-            case 3:
-                return "水";
-            case 4:
-                return "木";
-            case 5:
-                return "金";
-            case 6:
-                return "土";
-            default:
-                return "";
+    private String getDayOfWeekName(int dayOfWeekNum) {
+        String weekStr = "";
+        if (dayOfWeekNum == Calendar.SUNDAY) {
+            weekStr = "日";
+        } else if (dayOfWeekNum == Calendar.MONDAY) {
+            weekStr = "月";
+        } else if (dayOfWeekNum == Calendar.TUESDAY) {
+            weekStr = "火";
+        } else if (dayOfWeekNum == Calendar.WEDNESDAY) {
+            weekStr = "水";
+        } else if (dayOfWeekNum == Calendar.THURSDAY) {
+            weekStr = "木";
+        } else if (dayOfWeekNum == Calendar.FRIDAY) {
+            weekStr = "金";
+        } else if (dayOfWeekNum == Calendar.SATURDAY) {
+            weekStr = "土";
         }
+        return weekStr;
+    }
+
+    private int getWeekColorResId(int weekNum) {
+        int colorResId = R.color.black;
+        if (weekNum == Calendar.SUNDAY) {
+            colorResId = R.color.red;
+        } else if (weekNum == Calendar.SATURDAY) {
+            colorResId = R.color.blue;
+        }
+        return colorResId;
     }
 }

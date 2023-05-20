@@ -20,9 +20,12 @@ import com.example.cookingcalendar.ui.recipe_edit.RecipeEditActivity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
+import java.util.Date;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final int CURRENT_DAY_PAGE_NUM = 2;
 
     private FrameLayout favoriteLayout;
     private AppCompatImageView favoriteImage;
@@ -101,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
 
         // viewPagerの設定
         viewPager.setAdapter(new PagerAdapter(this,dataList));
+        // 今日の表示位置にページを切り替える
+        viewPager.setCurrentItem(CURRENT_DAY_PAGE_NUM, false);
 
     }
 }

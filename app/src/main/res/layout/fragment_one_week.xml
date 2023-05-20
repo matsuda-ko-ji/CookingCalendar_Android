@@ -18,23 +18,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
-            android:text="日"
-            android:textSize="12sp"
-            android:textColor="#FF0000"
-            />
+            tools:text="日"
+            android:textSize="12sp" />
         <FrameLayout
             android:id="@+id/day_text_layout_0"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/shape_calender_bg_off"
+            tools:background="@drawable/shape_calender_bg_off"
             android:layout_marginBottom="4dp">
 
             <TextView
                 android:id="@+id/day_text_0"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
+                tools:text="1"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#BDBDBD"
@@ -57,7 +55,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
-            android:text="月"
+            tools:text="月"
             android:textSize="12sp"
             android:textColor="#000000"
             />
@@ -66,14 +64,14 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/shape_calender_bg_off"
+            tools:background="@drawable/shape_calender_bg_off"
             android:layout_marginBottom="4dp">
 
             <TextView
                 android:id="@+id/day_text_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"
+                tools:text="2"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#BDBDBD"
@@ -96,7 +94,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
-            android:text="火"
+            tools:text="火"
             android:textSize="12sp"
             android:textColor="#000000"
             />
@@ -105,14 +103,14 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/shape_calender_bg_off"
+            tools:background="@drawable/shape_calender_bg_off"
             android:layout_marginBottom="4dp">
 
             <TextView
                 android:id="@+id/day_text_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="3"
+                tools:text="3"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#BDBDBD"
@@ -135,7 +133,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
-            android:text="水"
+            tools:text="水"
             android:textSize="12sp"
             android:textColor="#000000"
             />
@@ -144,14 +142,14 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/shape_calender_bg_on"
+            tools:background="@drawable/shape_calender_bg_on"
             android:layout_marginBottom="4dp">
 
             <TextView
                 android:id="@+id/day_text_3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="4"
+                tools:text="4"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#BDBDBD"
@@ -174,7 +172,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
-            android:text="木"
+            tools:text="木"
             android:textSize="12sp"
             android:textColor="#000000"
             />
@@ -183,14 +181,14 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/shape_calender_bg_off"
+            tools:background="@drawable/shape_calender_bg_off"
             android:layout_marginBottom="4dp">
 
             <TextView
                 android:id="@+id/day_text_4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="5"
+                tools:text="5"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#BDBDBD"
@@ -213,7 +211,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
-            android:text="金"
+            tools:text="金"
             android:textSize="12sp"
             android:textColor="#000000"
             />
@@ -222,14 +220,14 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/shape_calender_bg_off"
+            tools:background="@drawable/shape_calender_bg_off"
             android:layout_marginBottom="4dp">
 
             <TextView
                 android:id="@+id/day_text_5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="6"
+                tools:text="6"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#BDBDBD"
@@ -252,23 +250,21 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
-            android:text="土"
-            android:textSize="12sp"
-            android:textColor="#0000FF"
-            />
+            tools:text="土"
+            android:textSize="12sp" />
         <FrameLayout
             android:id="@+id/day_text_layout_6"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_marginTop="8dp"
-            android:background="@drawable/shape_calender_bg_off"
+            tools:background="@drawable/shape_calender_bg_off"
             android:layout_marginBottom="4dp">
 
             <TextView
                 android:id="@+id/day_text_6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="7"
+                tools:text="7"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:textColor="#BDBDBD"
