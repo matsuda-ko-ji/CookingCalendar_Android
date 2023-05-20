@@ -96,7 +96,7 @@ public class OneWeekFragment extends Fragment {
             String week = getDayOfWeekName(dayData.getDayOfweek());
             dayOfWeekTextViewList.get(i).setText(week);
             // 日付データの設定
-            dayTextViewList.get(i).setText(dayData.getDay());
+            dayTextViewList.get(i).setText(String.valueOf(dayData.getDay()));
             // 選択状態の確認
             FrameLayout dayTextBg = frameFlameLayoutList.get(i);
             if(dayData.isSelected()){
