@@ -61,25 +61,32 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
+                android:padding="16dp"
                 >
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="wrap_content"
                     android:text="タイトル"
+                    android:textSize="20sp"
                     />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
+                    android:hint="料理名"
+                    android:layout_marginBottom="16dp"
                     />
 
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="wrap_content"
                     android:text="調理時間"
+                    android:textSize="20sp"
                     />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
+                    android:hint="時間"
+                    android:layout_marginBottom="16dp"
                     />
 
                 <androidx.appcompat.widget.LinearLayoutCompat
@@ -94,12 +101,15 @@
                     >
                     <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="200dp"
-                        android:layout_height="64dp"
+                        android:layout_height="wrap_content"
                         android:text="材料"
+                        android:textSize="20sp"
                     />
                     <EditText
                         android:layout_width="200dp"
                         android:layout_height="64dp"
+                        android:hint="材料名"
+                        android:layout_marginBottom="16dp"
                     />
                     </androidx.appcompat.widget.LinearLayoutCompat>
                     <androidx.appcompat.widget.LinearLayoutCompat
@@ -109,34 +119,54 @@
                         >
                         <androidx.appcompat.widget.AppCompatTextView
                         android:layout_width="200dp"
-                        android:layout_height="64dp"
+                        android:layout_height="wrap_content"
                         android:text="分量"
+                        android:textSize="20sp"
                     />
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="64dp"
+                        android:hint="量"
+                        android:layout_marginBottom="16dp"
                     />
                     </androidx.appcompat.widget.LinearLayoutCompat>
-
-
+                </androidx.appcompat.widget.LinearLayoutCompat>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="64dp">
+                <FrameLayout
+                    android:layout_width="64dp"
+                    android:layout_height="64dp">
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_add_black"
+                        />
+                </FrameLayout>
                 </androidx.appcompat.widget.LinearLayoutCompat>
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="wrap_content"
                     android:text="手順"
+                    android:textSize="20sp"
                     />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
+                    android:hint="手順"
+                    android:layout_marginBottom="16dp"
                     />
                 <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
-                    android:layout_height="64dp"
+                    android:layout_height="wrap_content"
                     android:text="参考資料"
+                    android:textSize="20sp"
                     />
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="64dp"
+                    android:hint="アプリ名/URL"
                     />
             </androidx.appcompat.widget.LinearLayoutCompat>
 
