@@ -16,10 +16,10 @@
         <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/drawable/shape_calender_bg_off.xml" value="0.1845" />
         <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/drawable/shape_calender_bg_on.xml" value="0.1" />
         <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/drawable/splash_drawable.xml" value="0.3635" />
-        <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/activity_cookingphoto.xml" value="0.3625" />
-        <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/activity_recipe_edit.xml" value="0.3625" />
-        <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/fragment_one_week.xml" value="0.3333333333333333" />
+        <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/activity_cookingphoto.xml" value="0.16666666666666666" />
+        <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/activity_main.xml" value="0.17119565217391305" />
+        <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/activity_recipe_edit.xml" value="0.22" />
+        <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/fragment_one_week.xml" value="0.22" />
         <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/layout/fragment_sample__blank.xml" value="0.25" />
         <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.171" />
         <entry key="..\:/Android/CookingCalendar_Android/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.168" />
